@@ -1,0 +1,964 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: 
+   ========================================================================== */
+
+/*
+THEME NAME: Arrrr
+THEME URI: http://www.plaintxt.org/themes/sandbox/
+DESCRIPTION: Rich with powerful and dynamic semantic class selectors, Sandbox is a canvas for CSS artists
+VERSION: 6
+AUTHOR: a revlett
+AUTHOR URI:
+TAGS: white, microformats, fixed-width, flexible-width, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar
+ */
+
+/* ##########
+
+TYPOGRAPHY
+
+############ */
+
+body, html {
+    line-height:1.2em;
+    /* 	font-family: Helvetica, Arial, sans-serif;	 */
+    font-family:'Ubuntu Mono', Lucida Console, Monaco, sans-serif;
+    background: #f5f5f5;
+    color:#333;
+    margin:0;
+    padding:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+margin: 0 0 20px 0;
+font-weight: normal;
+font-family: 'VT323', Lucida Console, Monaco, sans-serif;
+line-height: 1.3em;
+font-size: 17px;
+}
+
+
+h3,h4,h5,h6 {
+  font-family:'Ubuntu Mono', Lucida Console, Monaco, sans-serif;
+}
+
+
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {font-weight:normal;}
+
+p, li {
+font-size: 12px;
+margin: 1em 0 1.5em 0;
+line-height: 1.5em;
+}
+
+p.entry-date { color: #bdbdbd; font-size:10px; text-transform:uppercase;}
+
+a:link, a:visited {color:#333; text-decoration:none; font-weight:bold;}
+
+a:hover, a:active {background:#DFF092;color:#333;}
+
+a.read_more {
+    display: block;
+    margin: 10px 0;
+    width: 78px;
+    padding: 1px 9px;
+    font-family: 'VT323', Lucida Console, Monaco, sans-serif;
+    text-transform: lowercase;
+    border: 1px solid #E3E2DE;
+    font-weight: 500;
+}
+a.read_more:hover {
+    border:1px solid #DFF092;
+}
+
+
+/* ##########
+
+LAYOUT
+
+############ */
+
+div.sidebar {
+    font-family: 'VT323', Lucida Console, Monaco, sans-serif;
+    text-transform:lowercase; 
+}
+div.sidebar a {
+    font-weight:normal;
+}
+
+#wrapper {
+width: 550px;
+margin: 142px auto 10px 103px;
+}
+
+.post {
+    margin: 0 0 60px 0;
+    clear: both;
+    width: 100%;
+    float: left;
+}
+
+
+.entry-date abbr {
+    text-transform:lowercase;
+    font: normal 13px/13px 'VT323', Lucida Console, Monaco, sans-serif;
+}
+
+div.skip-link {
+    position:absolute;
+    text-indent:-999999px;
+}
+
+/* header / sidebar */
+
+div#header-wrap {
+    height: 100%;
+    width: 122px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+div#header {
+    position:relative;
+    margin:0 auto;
+height: 100%;
+}
+
+#title-bar {
+position: absolute;
+top: 90px;
+left: 17px;
+text-align: right;
+width: 104px;
+}
+h1#blog-title {
+    text-align:right;
+}
+
+h1#blog-title a {
+display: block;
+font: 100 17px/17px 'VT323', Lucida Console, Monaco, sans-serif;
+letter-spacing: .07em;
+margin: 0;
+text-align: right;
+padding: 0;
+}
+h1#blog-title a:hover { 
+
+}
+
+h1#blog-title span.descrip {
+    display:block;
+    font: 100 13px/16px 'VT323', Lucida Console, Monaco, sans-serif;
+    letter-spacing:.07em;
+    padding:0 0.4em 1em 0;
+
+}
+
+h1#blog-title span {
+    float:right;
+
+}
+
+/* ##########
+
+NAV MENU
+
+############ */
+
+div#menu {
+position: absolute;
+top: 147px;
+right: 0;
+}
+
+div#menu li.current_page_item a {
+    background: #f5f5f5;
+    color:#595160;
+}
+
+div#menu li {
+    margin: 0 0 8px 0;
+}
+div#menu ul,div#menu ul ul {
+    line-height:1;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+div#menu ul a {
+    display: block;
+    padding:0 0.4em 1em 0;
+    text-decoration: none;
+    font: 500 14px/20px'VT323', Lucida Console, Monaco, sans-serif;
+    letter-spacing: .10em;
+    color: #999;
+    width:auto;
+
+}
+
+div#menu ul a:hover {
+    color:#595160;
+    background:none;
+}
+
+div#menu ul ul ul a {
+    font-style:italic;
+}
+
+div#menu ul li ul {
+    left:-999em;
+    position:absolute;
+}
+
+div#menu ul li:hover ul {
+    left:auto;
+}
+
+.page h1.entry-title,.page h2.entry-title {
+    text-align: right;
+    color:#606060;
+}
+
+/* META SIDEBAR */
+
+.entry-meta, #portfolio-page-meta {
+    font-size: 11px;
+    color: #D4D4D4;
+    font:100 12px/12px 'VT323', Lucida Console, Monaco, sans-serif;
+    text-transform: lowercase;
+    width:100px;
+    float: left;
+    margin-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
+    color: #999;
+    text-align: right;
+}
+
+
+
+.entry-meta h3 {
+    color:#595160;
+}
+.entry-meta ul {
+    margin-left: 0;
+    padding-left:0;
+}
+.entry-meta p, .entry-meta li { margin-bottom:4px;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 100;
+}
+
+.single .entry-meta, #portfolio-page-meta {position:fixed;}
+
+.single .entry-content {}
+
+.entry-content {
+    float: left;
+    width: 600px;
+    margin-top: -5px;
+    margin-left: 115px;
+
+}
+.skills_page .entry-content {
+    float: right;
+
+}
+
+.home .entry-content {
+    width: 540px;
+}
+
+
+.portfolio-page .entry-content {
+    float: right;
+    width: 720px;
+    margin-top: -5px;
+    margin-right: -100px;
+}
+
+#portfolio-blocks-wrap {
+    display:block;
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+
+.entry-meta a, #portfolio-page-meta a {
+    font-weight:normal;
+    color: #bdbdbd;
+}
+.entry-meta h2.entry-title a {
+    font-weight: normal;
+    color: #606060;
+}
+
+.portfolio-page .entry-meta {
+    position:fixed;
+}
+
+/* ##########
+
+stock theme css
+
+############ */
+
+div#container,div#primary,div#secondary,div#third {
+    background:none;
+}
+div#primary {border-top:4px double #d4d4d4; padding-top:20px; }
+
+div#container {
+}
+
+form#commentform .form-label {
+    margin:1em 0 0;
+}
+
+form#commentform span.required {
+    background:#f5f5f5;
+    color:#c30;
+}
+
+form#commentform,form#commentform p {
+    padding:0;
+}
+
+input#author,input#email,input#url,textarea#comment {
+    padding:0.2em;
+}
+
+div.comments ol li {
+    margin:0 0 3.5em;
+}
+
+textarea#comment {
+    height:13em;
+    margin:0 0 0.5em;
+    overflow:auto;
+    width:600px;
+}
+
+.alignright,img.alignright{
+    float:right;
+    margin:1em 0 0 1em;
+}
+
+.alignleft,img.alignleft{
+    float:left;
+    margin:1em 1em 0 0;
+}
+
+.aligncenter,img.aligncenter{
+    display:block;
+    margin:1em auto;
+    text-align:center;
+}
+
+div.gallery {
+    clear:both;
+    height:180px;
+    margin:1em 0;
+    width:100%;
+}
+
+p.wp-caption-text{
+    font-style:italic;
+}
+
+div.gallery dl{
+    margin:1em auto;
+    overflow:hidden;
+    text-align:center;
+}
+
+div.gallery dl.gallery-columns-1 {
+    width:100%;
+}
+
+div.gallery dl.gallery-columns-2 {
+    width:49%;
+}
+
+div.gallery dl.gallery-columns-3 {
+    width:33%;
+}
+
+div.gallery dl.gallery-columns-4 {
+    width:24%;
+}
+
+div.gallery dl.gallery-columns-5 {
+    width:19%;
+}
+
+div#nav-above {
+    margin-bottom:1em;
+}
+
+
+.skills_page div#nav-below {
+    position:fixed;
+    bottom:10px;	
+    left:auto;
+}
+
+div#nav-below {
+    margin: 200px auto 10px 220px;
+    clear: both;
+    width: 700px;
+    margin: 200px auto 10px 220px;
+    border-top: none;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.single div#nav-below {
+    margin-left:0;
+    margin-top: 30px;
+}
+
+div#nav-below .nav-previous {
+    float:left;
+    text-align:left;
+    width:50%;
+    height: 50px;
+}
+
+
+div#nav-below .nav-next {
+    float:left;
+    text-align:right;
+    width:50%;
+    height: 50px;
+}
+
+div#nav-images {
+    height:150px;
+    margin:1em 0;
+}
+
+div.navigation {
+    height:1.25em;
+    font-family: 'VT323', Lucida Console, Monaco, sans-serif;
+    text-transform:lowercase;
+}
+div.navigation a {
+    font-weight:normal;
+    color: #BBB;
+}
+div.navigation a:hover {}
+
+div.navigation div.nav-next {
+    float:right;
+    text-align:right;
+}
+
+
+div.sidebar input#s {
+    width:7em;
+}
+
+div.sidebar li {
+    list-style:none;
+    margin:0 0 2em;
+}
+
+div.sidebar li form {
+    margin:0.2em 0 0;
+    padding:0;
+}
+
+div.sidebar ul ul {
+    margin:0 0 0 1em;
+}
+
+div.sidebar ul ul li {
+    list-style:disc;
+    margin:0;
+}
+
+div.sidebar ul ul ul {
+    margin:0 0 0 0.5em;
+}
+
+div.sidebar ul ul ul li {
+    list-style:circle;
+}
+
+div#menu ul li,div.gallery dl,div.navigation div.nav-previous {
+    text-align:right;
+}
+
+input#author,input#email,input#url,div.navigation div {
+    width:50%;
+}
+
+div.gallery *,div.sidebar div,div.sidebar h3,div.sidebar ul {
+    margin:0;
+    padding:0;
+}
+
+
+/* ##########
+
+layout overwrites
+
+############ */
+
+#footer-wrap {
+    padding:5px 0 10px 0;
+    clear:both;
+}
+.page #footer-wrap {
+    padding-top: 100px;
+}
+
+#footer {
+    font-size:12px;
+    font-weight:100; 
+    text-transform:lowercase;
+    font-family:'VT323', Lucida Console, Monaco, sans-serif;
+    width:820px;
+    margin:10px auto 10px 390px;
+    color:#bdbdbd;
+
+}
+#footer a {
+    font-weight:100;
+color:#bdbdbd;}
+
+.wp-post-image {margin: 0 0 5px 0;}
+
+.post-wrap {
+    width:100%;
+}
+
+
+/* portfolio block page */
+
+.portfolio-block {
+    display:block;
+width: 210px;
+height: 128px;
+float: left;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    padding: 0;
+    position:relative;
+    list-style-type:none;
+    margin-left:0;
+}
+}
+.portfolio-block span {
+    display:block;
+    margin:50px auto;
+    text-align:center;
+    font-family:'VT323', Lucida Console, Monaco, sans-serif;
+    text-transform:lowercase; 
+    line-height:1em;
+
+
+
+}
+
+.portfolio-block a {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 100;
+    color:#666
+
+}
+
+.portfolio-block a:hover {
+    background:none;
+    color:#666
+}
+
+.portfolio-block .block {
+    width: 210px;
+    height: 128px;
+    border: 1px solid #d4d4d4;
+}
+.portfolio-block .block-hover img, .portfolio-block .block img {
+    max-width: 210px;
+    max-height: 128px;
+}
+.portfolio-block .block a, .portfolio-block .block-hover a  {
+    display:block;
+    width: 210px;
+    height: 128px;
+}
+
+.portfolio-block .block-hover {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 210px;
+    height: 128px;
+    background:#ccc;
+    border: 1px solid #d4d4d4;
+
+}
+
+#filter label {
+    display:block;
+    clear:both;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+#filter label input[type="radio"] {
+    display:none;
+}
+html {
+overflow-y: scroll;
+}
+/* misc layout */
+
+div#footer {
+    clear:left;
+}
+
+
+#comments {
+    width:700px;
+}
+.archive h2.page-title {
+    position: absolute;
+    top: 57px;
+    left: 420px;
+    color: #d4d4d4;
+    font-weight: 100;
+    font-size: 19px;
+}
+.nivo_slider .nivo-controlNav a {
+    display:block;
+    padding: 1px 5px;
+    border: 1px solid #ddd;
+    color:#ababab !important;
+    float:left;
+    margin-right:10px;
+    font-weight:normal;
+}
+
+.nivo_slider .nivo-controlNav a:hover {
+    border:1px solid #ddd;
+    background:#ddd;
+
+} 
+
+#about-slider {margin-bottom:15px;}
+
+div#about-slider_container .nivo_slider .nivo-controlNav {
+    height: 30px;
+    padding-top: 15px;
+    bottom: -30px !important;
+    text-align: right;
+}
+.meta_post_nav {
+    margin-top: 70px;
+}
+#portfolio-page-meta ul, #portfolio-page-meta ul li {list-style:none; margin:0;padding:0;}
+#portfolio-page-meta ul li {margin-bottom:.5em;}
+
+
+div.notes {
+    text-transform: none;
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:11px;
+    line-height: 15px;
+    text-align:right;
+    margin-top:35px;
+
+}
+
+.entry-meta ul li {
+    list-style:none;
+    margin-bottom:3px;
+}
+
+.entry-meta ul li a {
+    display: block;
+    padding: .5em 0;
+    width: auto;
+}
+
+.entry-meta ul li.active {
+    border-right: 1px solid #D4D4D4;
+    padding-right: 5px;
+    margin-right: -6px;
+}
+
+#respond {
+    margin-top:60px;
+}
+
+
+#skills_list {
+    position:fixed;
+}
+
+.portfolio #nav-below {
+
+}
+
+
+.entry-content h5 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+
+/* 3.2 =Image Grid
+---------------------------------------------------------------------- */
+
+.image-grid {
+  margin: -20px 0 0 -40px;
+  padding-left: 45px;
+  width: 840px;
+}
+
+.image-grid:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+.image-grid li {
+  width: 128px;
+  margin: 20px 0 0 35px;
+  float: left;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 17px;
+  color: #686f74;
+  height: 177px;
+  overflow: hidden;
+}
+
+.image-grid li img,
+.image-grid li strong {
+  display: block;
+}
+
+.image-grid li strong {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
